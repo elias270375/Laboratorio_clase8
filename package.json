@@ -3,18 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elias270375/Laboratorio_Clase8.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo Build completado correctamente"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/elias270375/Laboratorio_Clase8/issues"
-  },
-  "homepage": "https://github.com/elias270375/Laboratorio_Clase8#readme",
   "description": ""
 }
