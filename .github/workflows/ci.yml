@@ -1,0 +1,37 @@
+# Nombre del workflow
+name: Node.js CI
+
+# Se ejecuta cuando hay un push o un Pull Request hacia main
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Trabajos que ejecutará el pipeline
+jobs:
+  build:
+
+    # Máquina virtual donde se ejecutará
+    runs-on: ubuntu-latest
+
+    steps:
+      # Descarga el código del repositorio
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Instala y configura Node.js
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # Instala las dependencias del proyecto
+      - name: Install dependencies
+        run: npm ci
+
+      # Compila el proyecto
+      - name: Build
+        run: npm run build
+        
